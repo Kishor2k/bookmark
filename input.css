@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+.active::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: hsl(0, 94%, 66%);
+}
+.grid-auto {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply text-dark-blue font-bold;
+}
+p {
+  @apply text-grayish-blue;
+}
+.btn {
+  @apply font-bold text-sm px-4 py-2 rounded-md text-white shadow-md hover:bg-white border-2 transition-all;
+}
+.btn-blue {
+  @apply bg-soft-blue border-soft-blue hover:text-soft-blue;
+}
+.btn-red {
+  @apply bg-soft-red border-soft-red hover:text-soft-red;
+}
+.btn-neutral {
+  @apply bg-transparent text-dark-blue border-transparent hover:text-dark-blue hover:border-dark-blue;
+}
+.link-border {
+  @apply border-t border-t-grayish-blue p-4;
+}
+.feature-link {
+  @apply border-t border-neutral-300 py-4 relative block cursor-pointer md:border-0 hover:text-soft-red transition-colors;
+}
+section {
+  @apply py-10 md:py-16 lg:py-20;
+}
+.arrow-invert {
+  @apply rotate-180 text-soft-red;
+}
+.error {
+  @apply border-2 border-soft-red;
+}
+.error-form-group {
+  @apply mb-4 md:mb-0;
+}
